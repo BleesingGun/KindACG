@@ -8,7 +8,13 @@
 				web应用名称
 			 -->
   <display-name>KindACG</display-name>
-  
+  <!-- 
+ 	支出IDE和GUI工具用来表示Web应用的大图标和小图标
+  	<icon> 
+  		<small-icon></small-icon>
+  		<large-icon></large-icon>
+  	</icon>
+   -->
   <!-- 
   	指定欢迎界面
   		访问一个网站时，默认看到的第一个页面就叫做欢迎页
@@ -37,6 +43,7 @@
   
   <!-- 
   	声明应用范围内的初始化参数
+  	在servlet里可以通过getServletContext().getInitParameter("context/param")得到
    -->
   <context-param>
   	<param-name>contextConfigLocation</param-name>
