@@ -28,8 +28,9 @@
   		比如设置一个编码过滤器，过滤所有资源
    -->
   <filter>
-  	<filter-name>CharacterEncoding</filter-name>
-  	<filter-class>org.springframework.web.filter.CharaterEncodingFilter</filter-class>
+  	<filter-name>CharacterEncodingFilter</filter-name>
+  	<filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
+  	
   	<init-param>
   		<param-name>encoding</param-name>
   		<param-value>utf-8</param-value>
@@ -55,7 +56,7 @@
   	Listener元素支出时间监听程序类
    -->
   <listener>
-  	<listener-class>org.springFramework.web.context.ContextLoaderListener</listener-class>
+  	<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
   </listener>
   
   <!-- 
@@ -63,13 +64,13 @@
   	在servlet中能够调用getServletConfig().getinitParameter()或许参数名对应的值;
    -->
   <servlet>
-  	<servlet-name>spring</servlet-name>
-  	<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
-  	<init-param>
-  		<param-name>contextConfigLoction</param-name>
-  		<param-value>Classpaht:spring-servlet.xml</param-value>
-  	</init-param>
-  	<load-on-startup>1</load-on-startup>
+    <servlet-name>spring</servlet-name>
+    <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+    <init-param>
+      <param-name>contextConfigLocation</param-name>
+      <param-value>classpath:spring-servlet.xml</param-value>
+    </init-param>
+    <load-on-startup>1</load-on-startup>
   </servlet>
   <servlet-mapping>
   	<servlet-name>spring</servlet-name>

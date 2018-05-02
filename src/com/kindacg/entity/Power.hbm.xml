@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2018-5-2 11:23:34 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="com.kindacg.entity.Power" table="POWER">
+        <id name="p_id" type="int">
+            <column name="P_ID" />
+            <generator class="assigned" />
+        </id>
+        <property name="p_create" type="int">
+            <column name="P_CREATE" />
+        </property>
+        <property name="p_update" type="int">
+            <column name="P_UPDATE" />
+        </property>
+        <property name="p_retrieve" type="int">
+            <column name="P_RETRIEVE" />
+        </property>
+        <property name="p_delete" type="int">
+            <column name="P_DELETE" />
+        </property>
+        <property name="p_comment" type="int">
+            <column name="P_COMMENT" />
+        </property>
+        <set name="administrators" table="ADMINISTRATOR" inverse="false" lazy="true">
+            <key>
+                <column name="P_ID" />
+            </key>
+            <one-to-many class="com.kindacg.entity.Administrator" />
+        </set>
+        <set name="users" table="USER" inverse="false" lazy="true">
+            <key>
+                <column name="P_ID" />
+            </key>
+            <one-to-many class="com.kindacg.entity.User" />
+        </set>
+    </class>
+</hibernate-mapping>

@@ -14,39 +14,5 @@
 			<attribute name="owner.project.facets" value="java"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="/LearnDemo/WebContent/WEB-INF/lib/antlr-2.7.6.jar"/>
-	<classpathentry kind="lib" path="/LearnDemo/WebContent/WEB-INF/lib/aspectjtools.jar"/>
-	<classpathentry kind="lib" path="/LearnDemo/WebContent/WEB-INF/lib/c3p0-0.9.1.jar"/>
-	<classpathentry kind="lib" path="/LearnDemo/WebContent/WEB-INF/lib/com.springsource.org.aopalliance-1.0.0.jar"/>
-	<classpathentry kind="lib" path="/LearnDemo/WebContent/WEB-INF/lib/com.springsource.org.apache.commons.logging-1.1.1.jar"/>
-	<classpathentry kind="lib" path="/LearnDemo/WebContent/WEB-INF/lib/commons-collections-3.1.jar"/>
-	<classpathentry kind="lib" path="/LearnDemo/WebContent/WEB-INF/lib/dom4j-1.6.1.jar"/>
-	<classpathentry kind="lib" path="/LearnDemo/WebContent/WEB-INF/lib/hibernate-jpa-2.0-api-1.0.0.Final.jar"/>
-	<classpathentry kind="lib" path="/LearnDemo/WebContent/WEB-INF/lib/hibernate3.jar"/>
-	<classpathentry kind="lib" path="/LearnDemo/WebContent/WEB-INF/lib/javassist-3.12.0.GA.jar"/>
-	<classpathentry kind="lib" path="/LearnDemo/WebContent/WEB-INF/lib/jta-1.1.jar"/>
-	<classpathentry kind="lib" path="/LearnDemo/WebContent/WEB-INF/lib/log4j-1.2.14.jar"/>
-	<classpathentry kind="lib" path="/LearnDemo/WebContent/WEB-INF/lib/mysql-connector-java-5.1.22-bin.jar"/>
-	<classpathentry kind="lib" path="/LearnDemo/WebContent/WEB-INF/lib/slf4j-api-1.6.1.jar"/>
-	<classpathentry kind="lib" path="/LearnDemo/WebContent/WEB-INF/lib/spring-aop-4.2.6.RELEASE.jar"/>
-	<classpathentry kind="lib" path="/LearnDemo/WebContent/WEB-INF/lib/spring-aspects-4.2.6.RELEASE.jar"/>
-	<classpathentry kind="lib" path="/LearnDemo/WebContent/WEB-INF/lib/spring-beans-4.2.6.RELEASE.jar"/>
-	<classpathentry kind="lib" path="/LearnDemo/WebContent/WEB-INF/lib/spring-context-4.2.6.RELEASE.jar"/>
-	<classpathentry kind="lib" path="/LearnDemo/WebContent/WEB-INF/lib/spring-context-support-4.2.6.RELEASE.jar"/>
-	<classpathentry kind="lib" path="/LearnDemo/WebContent/WEB-INF/lib/spring-core-4.2.6.RELEASE.jar"/>
-	<classpathentry kind="lib" path="/LearnDemo/WebContent/WEB-INF/lib/spring-expression-4.2.6.RELEASE.jar"/>
-	<classpathentry kind="lib" path="/LearnDemo/WebContent/WEB-INF/lib/spring-instrument-4.2.6.RELEASE.jar"/>
-	<classpathentry kind="lib" path="/LearnDemo/WebContent/WEB-INF/lib/spring-instrument-tomcat-4.2.6.RELEASE.jar"/>
-	<classpathentry kind="lib" path="/LearnDemo/WebContent/WEB-INF/lib/spring-jdbc-4.2.6.RELEASE.jar"/>
-	<classpathentry kind="lib" path="/LearnDemo/WebContent/WEB-INF/lib/spring-jms-4.2.6.RELEASE.jar"/>
-	<classpathentry kind="lib" path="/LearnDemo/WebContent/WEB-INF/lib/spring-messaging-4.2.6.RELEASE.jar"/>
-	<classpathentry kind="lib" path="/LearnDemo/WebContent/WEB-INF/lib/spring-orm-4.2.6.RELEASE.jar"/>
-	<classpathentry kind="lib" path="/LearnDemo/WebContent/WEB-INF/lib/spring-oxm-4.2.6.RELEASE.jar"/>
-	<classpathentry kind="lib" path="/LearnDemo/WebContent/WEB-INF/lib/spring-test-4.2.6.RELEASE.jar"/>
-	<classpathentry kind="lib" path="/LearnDemo/WebContent/WEB-INF/lib/spring-tx-4.2.6.RELEASE.jar"/>
-	<classpathentry kind="lib" path="/LearnDemo/WebContent/WEB-INF/lib/spring-web-4.2.6.RELEASE.jar"/>
-	<classpathentry kind="lib" path="/LearnDemo/WebContent/WEB-INF/lib/spring-webmvc-4.2.6.RELEASE.jar"/>
-	<classpathentry kind="lib" path="/LearnDemo/WebContent/WEB-INF/lib/spring-webmvc-portlet-4.2.6.RELEASE.jar"/>
-	<classpathentry kind="lib" path="/LearnDemo/WebContent/WEB-INF/lib/spring-websocket-4.2.6.RELEASE.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>

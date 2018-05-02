@@ -52,7 +52,9 @@
 		 -->
 		<property name="mappingResources">
 			<list>
-				<value></value>
+				<value>com/kindacg/entity/Administrator.hbm.xml</value>
+				<value>com/kindacg/entity/User.hbm.xml</value>
+				<value>com/kindacg/entity/Power.hbm.xml</value>
 			</list>
 		</property>
 			
