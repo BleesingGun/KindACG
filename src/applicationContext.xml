@@ -23,14 +23,23 @@
 	 -->
 	<bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource" 
 											destroy-method="close">
-		
+		<!-- 指定连接数据库的驱动 -->
 		<property name="driverClass" value="com.mysql.jdbc.Driver"></property>
+		<!-- 指定连接数据库的URL -->
 		<property name="jdbcUrl" value="jdbc:mysql://localhost:3306/kindacg"></property>
+		<!-- 用户名 -->
 		<property name="user" value="bless"></property>										
+		<!-- 密码 -->
 		<property name="password" value="123456"></property>
+		<!-- 指定连接数据库连接池的最大连接数 -->
 		<property name="maxPoolSize" value="4"></property>
+		<!-- 指定连接数据库连接池的最小连接数 -->
 		<property name="minPoolSize" value="1"></property>
+		<!-- 指定连接数据库连接池的初始化连接数 -->
 		<property name="initialPoolSize" value="1"></property>
+		<!-- 最大空闲时间,1800秒内未使用则连接被丢弃。
+		若为0则永不丢弃。Default: 0 用它来解决mysql 8小时自动释放连接的问题 
+		-->
 		<property name="maxIdleTime" value="28000"></property>
 		
 	</bean>
@@ -50,16 +59,19 @@
 		<!-- 
 			指定映射文件.xml
 		 -->
-		<property name="mappingResources">
+		<property name="mappingDirectoryLocations">
 			<list>
-				<value>com/kindacg/entity/Administrator.hbm.xml</value>
-				<value>com/kindacg/entity/User.hbm.xml</value>
-				<value>com/kindacg/entity/Power.hbm.xml</value>
+				<!-- 
+					mappingDirectoryLocation可以自动扫描该包及子包下的*.hbm,xml
+					与mappingResource不同的是如果映射文件在src目录下必须加上classpath
+				 -->
+				<value>classpath:com/kindacg/entity</value>
 			</list>
 		</property>
 			
 	</bean>
 	
+	<!-- 事务管理 -->
 	<bean id="transactionManager"
 		class="org.springframework.orm.hibernate3.HibernateTransactionManager">
 		
