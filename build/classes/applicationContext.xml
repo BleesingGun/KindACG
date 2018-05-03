@@ -109,7 +109,7 @@
 	</tx:advice>
 	
 	<aop:config>
-		<aop:pointcut id="transactionPointcut" expression="execution(* servicesDao..*(..))" />
+		<aop:pointcut id="transactionPointcut" expression="execution(* services..*(..))" />
 		<aop:advisor pointcut-ref="transactionPointcut"
 			advice-ref="transactionAdvice" />
 	</aop:config>	
