@@ -8,6 +8,15 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<p>helloWorld!</p>
+	<p>欢迎来到KindACG!</p>
+	<form action="user_login.action" method="post">
+		<table cellpadding="0" cellspacing="0" border="0" class="form_table">
+			<tr>
+				<td><input type="text" name="u_account"></td>
+				<td><input type="password" name="u_password"></td>
+				<td><input type="submit" class="button" name="submit" value="Submit &raquo;"></td>
+			</tr>
+		</table>
+	</form>
 </body>
 </html>
