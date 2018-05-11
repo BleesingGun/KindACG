@@ -54,8 +54,8 @@
 				<prop key="hibernate.dialect">org.hibernate.dialect.MySQL5InnoDBDialect</prop>
 				<prop key="hibernate.show_sql">true</prop>
 				<prop key="hibernate.hbm2ddl.auto">update</prop>
-				<prop key="hibernate.current_session_context_class">thread</prop>
-				<prop key="hibernate.transaction.factory_class">org.hibernate.transaction.JDBCTransactionFactory</prop>
+				<!-- <prop key="hibernate.current_session_context_class">thread</prop> -->
+			
 			</props>
 		</property>
 		<!-- 
@@ -83,7 +83,7 @@
 	
 	<tx:advice id="transactionAdvice" transaction-manager="transactionManager">
 		<tx:attributes>
-		
+			
 			<tx:method name="add*" propagation="REQUIRED" rollback-for="Exception"/>
 			<tx:method name="append*" propagation="REQUIRED" rollback-for="Exception"/>
 			<tx:method name="insert*" propagation="REQUIRED" rollback-for="Exception"/>
@@ -103,7 +103,7 @@
 			<tx:method name="search*" propagation="SUPPORTS" rollback-for="Exception"/>
 			<tx:method name="datagrid*" propagation="SUPPORTS" rollback-for="Exception"/>
 			<tx:method name="count" propagation="SUPPORTS" rollback-for="Exception"/>
-			<tx:method name="login" propagation="SUPPORTS" rollback-for="Exception"/>
+			<tx:method name="Login" propagation="SUPPORTS" rollback-for="Exception"/>
 			<tx:method name="*" propagation="SUPPORTS" rollback-for="Exception"/>
 			
 			
@@ -111,7 +111,7 @@
 	</tx:advice>
 	
 	<aop:config>
-		<aop:pointcut id="transactionPointcut" expression="execution(* services..*(..))" />
+		<aop:pointcut id="transactionPointcut" expression="execution(* com.kindacg.service..*(..))" />
 		<aop:advisor pointcut-ref="transactionPointcut"
 			advice-ref="transactionAdvice" />
 	</aop:config>	
