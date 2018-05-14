@@ -14,7 +14,11 @@ public class UserServiceDaoImpl {
 	UserDao userDao;
 	
 	
+	
 	public User Login(User u) throws Exception{
 		return userDao.Login(u);
+	}
+	public int Save_user(User u) throws Exception{
+		return userDao.save(u);
 	}
 }

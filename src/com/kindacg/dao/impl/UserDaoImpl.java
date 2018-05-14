@@ -14,6 +14,7 @@ public class UserDaoImpl extends DaoTemplateImpl<User> implements UserDao{
 	public User Login (User u) throws Exception{
 		
 		String hql = "from " + classes.getName() + " as u where u.u_account=:u_account and u.u_password=:u_password";
+		System.out.println(classes.getName());
 		Query query = getSessionFactory().getCurrentSession().createQuery(hql);
 		query.setString("u_account", u.getU_account());
 		query.setString("u_password", u.getU_password());

@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.orm.hibernate3.support.HibernateDaoSupport;
 
 import com.kindacg.dao.DaoTemplate;
+import com.kindacg.entity.User;
 
 public class DaoTemplateImpl<T> extends HibernateDaoSupport implements DaoTemplate<T>{
 	
@@ -58,7 +59,7 @@ public class DaoTemplateImpl<T> extends HibernateDaoSupport implements DaoTempla
 	@Override
 	public List<T> select() throws Exception {
 		// TODO Auto-generated method stub
-		String hql = "from" + classes.getName();
+		String hql = "from com.kindacg.entity.User";
 		Query query = this.getSessionFactory().getCurrentSession().createQuery(hql);
 		return query.list();
 	}

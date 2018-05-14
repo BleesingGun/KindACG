@@ -6,7 +6,7 @@
     <class name="com.kindacg.entity.Power" table="POWER">
         <id name="p_id" type="int">
             <column name="P_ID" />
-            <generator class="assigned" />
+            <generator class="increment" />
         </id>
         <property name="p_create" type="int">
             <column name="P_CREATE" />
@@ -23,13 +23,13 @@
         <property name="p_comment" type="int">
             <column name="P_COMMENT" />
         </property>
-        <set name="administrators" table="ADMINISTRATOR" inverse="false" lazy="true">
+        <set name="administrators" table="ADMINISTRATOR" inverse="false" lazy="true" cascade="save-update">
             <key>
                 <column name="P_ID" />
             </key>
             <one-to-many class="com.kindacg.entity.Administrator" />
         </set>
-        <set name="users" table="USER" inverse="false" lazy="true">
+        <set name="users" table="USER" inverse="false" lazy="true" cascade="save-update">
             <key>
                 <column name="P_ID" />
             </key>

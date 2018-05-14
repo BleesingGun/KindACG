@@ -6,7 +6,7 @@
     <class name="com.kindacg.entity.Administrator" table="ADMINISTRATOR">
         <id name="a_id" type="java.lang.Integer">
             <column name="A_ID" />
-            <generator class="assigned" />
+            <generator class="increment" />
         </id>
         <property name="a_account" type="java.lang.String">
             <column name="A_ACCOUNT" />
@@ -26,7 +26,7 @@
         <property name="a_createtime" type="java.sql.Timestamp">
             <column name="A_CREATETIME" />
         </property>
-        <set name="powers" table="POWER" inverse="false" lazy="true">
+        <set name="powers" table="POWER" inverse="false" lazy="true" cascade="save-update">
             <key>
                 <column name="A_ID" />
             </key>
