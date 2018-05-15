@@ -29,10 +29,10 @@ public class AdministratorController {
 		return "redirect:/Error.jsp";
 	}
 	
-	@RequestMapping("/administrator_select")
+	/*@RequestMapping("/administrator_select")
 	public String Select(HttpSession session) throws Exception{
 		
-		//session.setAttribute("users", administratorServiceDaoImpl.select());
+		session.setAttribute("users", administratorServiceDaoImpl.Select());
 		return "UserList.jsp";
-	}
+	}*/
 }

@@ -59,8 +59,9 @@ public class DaoTemplateImpl<T> extends HibernateDaoSupport implements DaoTempla
 	@Override
 	public List<T> select() throws Exception {
 		// TODO Auto-generated method stub
-		String hql = "from com.kindacg.entity.User";
+		String hql = "from "+classes.getName()+" as u";
 		Query query = this.getSessionFactory().getCurrentSession().createQuery(hql);
+		//System.out.println(query.list());
 		return query.list();
 	}
 

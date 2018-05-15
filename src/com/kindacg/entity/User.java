@@ -63,5 +63,11 @@ public class User implements Serializable {
 	public void setU_createtime(Timestamp u_createtime) {
 		this.u_createtime = u_createtime;
 	}
+	@Override
+	public String toString() {
+		return "User [u_id=" + u_id + ", u_account=" + u_account + ", u_password=" + u_password + ", u_name=" + u_name
+				+ ", u_telephone=" + u_telephone + ", u_email=" + u_email + ", u_createtime=" + u_createtime
+				+ ", powers=" + powers + "]";
+	}
 	
 }

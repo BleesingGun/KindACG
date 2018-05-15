@@ -1,6 +1,8 @@
 package com.kindacg.controller;
 
 import java.util.HashSet;
+import java.util.List;
+import java.util.Map;
 import java.util.Set;
 
 import javax.servlet.http.HttpSession;
@@ -42,4 +44,10 @@ public class UserController {
 		return "redirect:Error.jsp";
 	}
 	
+	@RequestMapping("/user_select")
+	public String Select(Map<String, List<User>> models) throws Exception{
+		
+		models.put("users", userServiceDaoImpl.Select());
+		return "/UserList";
+	}
 }

@@ -9,7 +9,7 @@
 <title>用户管理界面</title>
 </head>
 <body>
-	<form action="administrator_select.action" method="post">
+	<form action="user_select.action" method="post">
 		<input type="submit" class="button" value="查询">
 	</form>
 	<table>
@@ -26,8 +26,10 @@
 		</thead>
 	
 			<%
-				List<User> users = (List<User>)request.getAttribute("users");
-				for(User u:users){
+				List<User> users = (List<User>) request.getAttribute("users");
+				System.out.println(users);
+				if(users != null){
+					for(User u:users){
 			%>
 			<tr>
 				<td><%=u.getU_account() %></td>
@@ -41,7 +43,9 @@
 			</tr>
 			<%
 				}
+					}
 			%>
 	</table>
+
 </body>
 </html>

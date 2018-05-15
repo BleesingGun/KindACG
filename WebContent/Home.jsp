@@ -1,3 +1,4 @@
+<%@page import="com.kindacg.entity.User"%>
 <%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
 
 

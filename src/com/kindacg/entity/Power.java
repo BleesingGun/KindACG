@@ -13,6 +13,7 @@ public class Power implements Serializable {
 	private Set<Administrator> administrators;
 	private Set<User> users;
 	
+
 	
 	public Set<Administrator> getAdministrators() {
 		return administrators;
@@ -26,7 +27,6 @@ public class Power implements Serializable {
 	public void setUsers(Set<User> users) {
 		this.users = users;
 	}
-	
 	public int getP_id() {
 		return p_id;
 	}
