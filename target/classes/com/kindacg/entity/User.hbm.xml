@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2018-5-2 11:23:34 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="com.kindacg.entity.User" table="USER">
+        <id name="u_id" type="java.lang.Integer">
+            <column name="U_ID" />
+            <generator class="increment" />
+        </id>
+        <property name="u_account" type="java.lang.String">
+            <column name="U_ACCOUNT" />
+        </property>
+        <property name="u_password" type="java.lang.String">
+            <column name="U_PASSWORD" />
+        </property>
+        <property name="u_name" type="java.lang.String">
+            <column name="U_NAME" />
+        </property>
+        <property name="u_telephone" type="java.lang.Integer">
+            <column name="U_TELEPHONE" />
+        </property>
+        <property name="u_email" type="java.lang.String">
+            <column name="U_EMAIL" />
+        </property>
+        <property name="u_createtime" type="java.sql.Timestamp">
+            <column name="U_CREATETIME" />
+        </property>
+        <set name="powers" table="POWER" inverse="false" lazy="true" cascade="save-update">
+            <key>
+                <column name="U_ID" />
+            </key>
+            <one-to-many class="com.kindacg.entity.Power" />
+        </set>
+    </class>
+</hibernate-mapping>
